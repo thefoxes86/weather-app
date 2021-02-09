@@ -1,9 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
 import SearchField from "./components/SearchField";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
 
 const useStyle = makeStyles((theme) => ({
   app: {
@@ -24,16 +21,6 @@ const useStyle = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-    margin: "auto",
-  },
-  button: {
-    width: "100%",
-    marginTop: "2rem",
-  },
 }));
 
 export default function App() {
@@ -41,23 +28,7 @@ export default function App() {
   return (
     <div className={classes.app}>
       <div className={classes.root}>
-        <Grid container spacing={3}>
-          <Paper className={classes.paper}>
-            <Grid item xs={12}>
-              <SearchField />
-            </Grid>
-            <Grid item xs={12}>
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                className={classes.button}
-              >
-                View
-              </Button>
-            </Grid>
-          </Paper>
-        </Grid>
+        <SearchField />
       </div>
     </div>
   );
