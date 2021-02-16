@@ -1,7 +1,7 @@
 const loadCityApi = () => {
   return new Promise((resolve, reject) => {
     const response = fetch(
-      "https://parseapi.back4app.com/classes/Italycities_City?limit=200&order=name&keys=name,country,countryCode,location",
+      "https://parseapi.back4app.com/classes/Italycities_City?limit=200&order=name",
 
       {
         headers: {
